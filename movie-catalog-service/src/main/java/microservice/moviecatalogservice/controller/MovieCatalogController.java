@@ -24,9 +24,6 @@ public class MovieCatalogController {
 	@RequestMapping("/{userId}")
 	public List<CatalogItem> getCatalog(String userId) {
 		
-		RestTemplate restTemplate = new RestTemplate();
-		// .getForObject will take the JSON information, unmarshall it into Java code. Here, we store java code into the movie object
-		// Movie movie = restTemplate.getForObject("http://localhost:8081/movies/foo", Movie.class);
 		
 		// get all rated movie IDs
 		List<Rating> ratings = Arrays.asList(
